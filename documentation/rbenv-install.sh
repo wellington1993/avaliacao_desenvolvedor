@@ -30,12 +30,8 @@ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor 
 git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 # echo "gem: --no-document" > ~/.gemrc
 
-rbenv install
-rbenv rehash
 rbenv install 3.0.0
-rbenv rehash
 rbenv global 3.0.0
-rbenv rehash
 rbenv local 3.0.0
 rbenv rehash
 
