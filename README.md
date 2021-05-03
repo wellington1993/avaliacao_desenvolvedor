@@ -1,12 +1,12 @@
 # README
 
-- [] Favor Checar a Issue #1
-- [] Rodando com docker ou com ambiente instalado (se necessário, rodar `bin/run.sh`)
-- [] Ainda sem upload de arquivo
-- [] Importacao funcionando via task
-- [] Banco de dados modelado
-- [] Aplicacao bonita
-- [] Testes
+- [ ] Favor Checar a Issue #1
+- [x] Rodando com docker ou com ambiente instalado (se necessário, rodar `bin/run.sh`)
+- [ ] Ainda sem upload de arquivo
+- [ ] Importacao funcionando via task
+- [x] Banco de dados modelado
+- [ ] Aplicacao bonita
+- [ ] Testes
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
@@ -35,7 +35,7 @@ Banco em arquivo ja inicializado
 
 * How to run the test suite
 
-[] Testes
+- [ ] Testes
 
 * Services (job queues, cache servers, search engines, etc.)
 
