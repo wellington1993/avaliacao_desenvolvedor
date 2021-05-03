@@ -1,12 +1,12 @@
 # README
 
-- [ ] Favor Checar a Issue #1 (https://github.com/wellington1993/avaliacao_desenvolvedor/issues/1)
+- [ ] TODO: Aplicacao bonita
+- [ ] TODO: Testes
+- [x] Favor Checar a Issue #1 (https://github.com/wellington1993/avaliacao_desenvolvedor/issues/1)
 - [x] Rodando com docker ou com ambiente instalado (se necessário, rodar `bin/run.sh`)
-- [ ] Ainda sem upload de arquivo
-- [ ] Importacao funcionando via task
+  - Dicas no `documentation/`para instalações binarias
+- [x] upload de arquivo
 - [x] Banco de dados modelado
-- [ ] Aplicacao bonita
-- [ ] Testes
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
