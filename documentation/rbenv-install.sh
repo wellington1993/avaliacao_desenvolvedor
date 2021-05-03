@@ -32,13 +32,11 @@ git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 
 rbenv install
 rbenv rehash
-rbenv install 3.1.0-dev
+rbenv install 3.0.0
 rbenv rehash
-rbenv install 3.0.1
+rbenv global 3.0.0
 rbenv rehash
-rbenv global 3.0.1
-rbenv rehash
-rbenv local 3.0.1
+rbenv local 3.0.0
 rbenv rehash
 
 gem install bundler
