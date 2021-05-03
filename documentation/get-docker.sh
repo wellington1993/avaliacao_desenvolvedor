@@ -1,4 +1,14 @@
 #!/bin/sh
+
+sudo snap install docker
+sudo groupadd docker
+sudo usermod -aG docker $USER
+sudo usermod -aG docker ${USER}
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo systemctl enable docker --now
+sudo service docker start
+
 set -e
 # Docker CE for Linux installation script
 #
@@ -523,3 +533,4 @@ do_install() {
 # wrapped up in a function so that we have some protection against only getting
 # half the file during "curl | sh"
 do_install
+
