@@ -16,7 +16,9 @@
   </thead>
 
   <tbody>
+    <% total = 0 # TODO: Refatorar... %>
     <% @sales.each do |sale| %>
+      <% total += sale.total %>
       <tr>
         <td><%= sale.custumer.name %></td>
         <td><%= sale.product.description %></td>
@@ -31,6 +33,7 @@
     <% end %>
   </tbody>
 </table>
+<b><%= "Total de vendas: R$ #{total}" %></b>
 
 <br>
 
