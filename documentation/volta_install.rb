@@ -8,6 +8,10 @@ curl https://get.volta.sh | bash
 volta install node@latest
 volta install yarn@latest
 
+gem install bundler
+bundle install
+gem install rails
+
 bundle binstubs bundler --force
-rails  webpacker:install
+rails webpacker:install
 
