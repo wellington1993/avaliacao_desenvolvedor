@@ -1,17 +1,12 @@
-web:
+avaliacao:
   build: .
   ports:
-    - "3000:3000"
-  links:
-    - db
+    - "3001:3000"
   environment:
     # MYSQL_ROOT_PASSWORD: root
     # MYSQL_ADDRESS: db
     RAILS_ENV: development
-db:
-  # image: library/mysql:5.6.22
-  # ports:
-  #   - "13306:3306"
-  # environment:
-  #   MYSQL_ROOT_PASSWORD: root
+  volumes:
+    - .:/app
+  command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
 
