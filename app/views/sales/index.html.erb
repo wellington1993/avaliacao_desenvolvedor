@@ -34,5 +34,11 @@
 
 <br>
 
+<h3>Import Sales</h3>
+<%= form_tag import_sales_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag 'Upload Sales' %>
+<% end %>
+
 <%= link_to 'New Sale', new_sale_path %>
 

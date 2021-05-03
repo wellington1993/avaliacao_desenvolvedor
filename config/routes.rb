@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :custumers
-  resources :sales
+  resources :sales do
+    collection { post :import }
+  end
   resources :vendors
   resources :products
   root to: 'sales#index'

@@ -56,6 +56,11 @@ class SalesController < ApplicationController
     end
   end
 
+  def import
+    Sale.import(params[:file])
+    redirect_to sales_path, notice: 'Sales added successfully'
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_sale
