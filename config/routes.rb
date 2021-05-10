@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :custumers
+  resources :customers
   resources :sales do
     collection { post :import }
   end
