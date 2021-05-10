@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2021_05_03_151543) do
 
-  create_table "custumers", force: :cascade do |t|
+  create_table "customers", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -28,14 +28,14 @@ ActiveRecord::Schema.define(version: 2021_05_03_151543) do
   end
 
   create_table "sales", force: :cascade do |t|
-    t.integer "custumer_id", null: false
+    t.integer "customer_id", null: false
     t.integer "product_id", null: false
     t.integer "vendor_id", null: false
     t.integer "quantity"
     t.decimal "total", precision: 8, scale: 2
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["custumer_id"], name: "index_sales_on_custumer_id"
+    t.index ["customer_id"], name: "index_sales_on_customer_id"
     t.index ["product_id"], name: "index_sales_on_product_id"
     t.index ["vendor_id"], name: "index_sales_on_vendor_id"
   end
@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 2021_05_03_151543) do
     t.index ["name"], name: "index_vendors_on_name"
   end
 
-  add_foreign_key "sales", "custumers"
+  add_foreign_key "sales", "customers"
   add_foreign_key "sales", "products"
   add_foreign_key "sales", "vendors"
 end

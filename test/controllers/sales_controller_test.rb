@@ -17,7 +17,7 @@ class SalesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create sale" do
     assert_difference('Sale.count') do
-      post sales_url, params: { sale: { custumer_id: @sale.custumer_id, product_id: @sale.product_id, quantity: @sale.quantity, total: @sale.total, vendor_id: @sale.vendor_id } }
+      post sales_url, params: { sale: { customer_id: @sale.customer_id, product_id: @sale.product_id, quantity: @sale.quantity, total: @sale.total, vendor_id: @sale.vendor_id } }
     end
 
     assert_redirected_to sale_url(Sale.last)
@@ -34,7 +34,7 @@ class SalesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update sale" do
-    patch sale_url(@sale), params: { sale: { custumer_id: @sale.custumer_id, product_id: @sale.product_id, quantity: @sale.quantity, total: @sale.total, vendor_id: @sale.vendor_id } }
+    patch sale_url(@sale), params: { sale: { customer_id: @sale.customer_id, product_id: @sale.product_id, quantity: @sale.quantity, total: @sale.total, vendor_id: @sale.vendor_id } }
     assert_redirected_to sale_url(@sale)
   end
 
@@ -46,3 +46,4 @@ class SalesControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to sales_url
   end
 end
+

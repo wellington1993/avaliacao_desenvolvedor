@@ -1,15 +1,16 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  custumer: one
+  customer: one
   product: one
   vendor: one
   quantity: 1
   total: 9.99
 
 two:
-  custumer: two
+  customer: two
   product: two
   vendor: two
   quantity: 1
   total: 9.99
+

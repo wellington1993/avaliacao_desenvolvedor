@@ -1,11 +1,12 @@
 <p id="notice"><%= notice %></p>
 
+<i class="fas fa-list"></i>
 <h1>Sales</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Custumer</th>
+      <th>Customer</th>
       <th>Product</th>
       <th>Unit Price</th>
       <th>Vendor</th>
@@ -20,7 +21,7 @@
     <% @sales.each do |sale| %>
       <% total += sale.total %>
       <tr>
-        <td><%= sale.custumer.name %></td>
+        <td><%= sale.customer.name %></td>
         <td><%= sale.product.description %></td>
         <td><%= sale.product.price %></td>
         <td><%= sale.vendor.name %></td>
