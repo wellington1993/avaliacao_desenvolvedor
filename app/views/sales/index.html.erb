@@ -1,17 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Sales</h1>
-
-<table>
+<div class="table-responsive">
+<table class="table table-dark table-hover table-striped table-bordered table-sm align-middle caption-top">
+  <caption>List of Sales</caption>
   <thead>
     <tr>
-      <th>Custumer</th>
-      <th>Product</th>
-      <th>Unit Price</th>
-      <th>Vendor</th>
-      <th>Quantity</th>
-      <th>Total</th>
-      <th colspan="3"></th>
+      <th scope="col">Customer</th>
+      <th scope="col">Product</th>
+      <th scope="col">Unit Price</th>
+      <th scope="col">Vendor</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Total</th>
+      <th colspan="3" scope="col"></th>
     </tr>
   </thead>
 
@@ -20,7 +20,7 @@
     <% @sales.each do |sale| %>
       <% total += sale.total %>
       <tr>
-        <td><%= sale.custumer.name %></td>
+        <td><%= sale.customer.name %></td>
         <td><%= sale.product.description %></td>
         <td><%= sale.product.price %></td>
         <td><%= sale.vendor.name %></td>
@@ -33,6 +33,7 @@
     <% end %>
   </tbody>
 </table>
+</div>
 <b><%= "Total de vendas: R$ #{total}" %></b>
 
 <br>

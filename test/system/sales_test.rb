@@ -14,7 +14,7 @@ class SalesTest < ApplicationSystemTestCase
     visit sales_url
     click_on "New Sale"
 
-    fill_in "Custumer", with: @sale.custumer_id
+    fill_in "Customer", with: @sale.customer_id
     fill_in "Product", with: @sale.product_id
     fill_in "Quantity", with: @sale.quantity
     fill_in "Total", with: @sale.total
@@ -29,7 +29,7 @@ class SalesTest < ApplicationSystemTestCase
     visit sales_url
     click_on "Edit", match: :first
 
-    fill_in "Custumer", with: @sale.custumer_id
+    fill_in "Customer", with: @sale.customer_id
     fill_in "Product", with: @sale.product_id
     fill_in "Quantity", with: @sale.quantity
     fill_in "Total", with: @sale.total
@@ -49,3 +49,4 @@ class SalesTest < ApplicationSystemTestCase
     assert_text "Sale was successfully destroyed"
   end
 end
+
