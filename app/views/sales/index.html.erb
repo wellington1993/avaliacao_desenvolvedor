@@ -26,23 +26,45 @@
         <td><%= sale.vendor.name %></td>
         <td><%= sale.quantity %></td>
 	<td><%= "R$ #{sale.total}" %></td>
-        <td><%= link_to 'Show', sale %></td>
-        <td><%= link_to 'Edit', edit_sale_path(sale) %></td>
-        <td><%= link_to 'Destroy', sale, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', sale, class: 'btn btn-default btn-primary text-white' %></td>
+        <td><%= link_to 'Edit', edit_sale_path(sale), class: 'btn btn-default btn-info text-white' %></td>
+        <td><%= link_to 'Destroy', sale, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-danger text-withe' %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 </div>
-<b><%= "Total de vendas: R$ #{total}" %></b>
 
-<br>
+<div>
+  <b>Total de vendas:</b>
+  <span>R$ <%= total %></span>
+  <div>
+    <%= link_to 'New Sale', new_sale_path, class: 'btn btn-default btn-primary text-white' %>
+  </div>
+  <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#salesModal">
+    Import Sales
+  </button>
+</div>
 
-<h3>Import Sales</h3>
-<%= form_tag import_sales_path, multipart: true do %>
-  <%= file_field_tag :file %>
-  <%= submit_tag 'Upload Sales' %>
-<% end %>
-
-<%= link_to 'New Sale', new_sale_path %>
+<div class="modal fade" tabindex="-1" id="salesModal" role="dialog" aria-labelledby="salesModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="salesModalLabel">Import Sales</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= form_tag import_sales_path, multipart: true do %>
+          <%= file_field_tag :file %>
+          <%= submit_tag 'Upload Sales', class: 'btn btn-default btn-info'  %>
+        <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
